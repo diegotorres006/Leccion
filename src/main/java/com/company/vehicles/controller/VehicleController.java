@@ -1,9 +1,10 @@
-package com.company.vehicles.controllers;
+package com.company.vehicles.controller;
 
 import com.company.vehicles.dto.OperationResponseDto;
 import com.company.vehicles.dto.VehicleResponseDto;
 import com.company.vehicles.dto.VehicleStockRequestDto;
-import com.company.vehicles.services.VehicleService;
+import com.company.vehicles.service.VehicleService;
+
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
