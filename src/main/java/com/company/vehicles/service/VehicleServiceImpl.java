@@ -1,4 +1,4 @@
-package com.company.vehicles.services;
+package com.company.vehicles.service;
 
 import com.company.vehicles.dto.OperationResponseDto;
 import com.company.vehicles.dto.VehicleResponseDto;
@@ -8,7 +8,8 @@ import com.company.vehicles.exception.ConflictException;
 import com.company.vehicles.exception.ResourceNotFoundException;
 import com.company.vehicles.mapper.VehicleMapper;
 import com.company.vehicles.repository.VehicleRepository;
-import com.company.vehicles.services.VehicleService;
+import com.company.vehicles.service.VehicleService;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

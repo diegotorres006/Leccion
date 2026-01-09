@@ -1,4 +1,4 @@
-package com.company.vehicles.services;
+package com.company.vehicles.service;
 
 import java.util.List;
 
