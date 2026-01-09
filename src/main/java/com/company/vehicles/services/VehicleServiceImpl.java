@@ -46,23 +46,23 @@ public class VehicleServiceImpl implements VehicleService {
     @Transactional
     public OperationResponseDto deleteByModel(String model) {
         Vehicle vehicle = vehicleRepository.findByModel(model)
-                .orElseThrow(() -> new ResourceNotFoundException("Vehicle no encontrado"));
+                .orElseThrow(() -> new ResourceNotFoundException("Vehiculo no encontrado"));
 
         if ("S".equals(vehicle.getDeleted())) {
-            throw new ConflictException("Vehicle ya eliminado");
+            throw new ConflictException("Vehiculo ya eliminado");
         }
 
         vehicle.setDeleted("S");
         vehicleRepository.save(vehicle);
 
-        return new OperationResponseDto("Vehicle eliminado exitosamente");
+        return new OperationResponseDto("Vehiculo eliminado exitosamente");
     }
 
     @Override
     @Transactional
     public VehicleResponseDto updateStock(VehicleStockRequestDto request) {
         Vehicle vehicle = vehicleRepository.findById(request.getId())
-                .orElseThrow(() -> new ResourceNotFoundException("Vehicle no encontrado"));
+                .orElseThrow(() -> new ResourceNotFoundException("Vehiculo no encontrado"));
 
         vehicle.setStock(request.getStock());
         Vehicle updatedVehicle = vehicleRepository.save(vehicle);
